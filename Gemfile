@@ -39,7 +39,8 @@ end
 
 # For testing, generating faker data and also database cleaning per each request
 group :test do
-  gem 'rspec'
+  gem 'rspec', '~>3.7.0'
+  gem 'rspec-rails'
   gem 'factory_bot_rails', '~> 4.0'
   gem 'shoulda-matchers', '~> 3.1'
   gem 'faker'
