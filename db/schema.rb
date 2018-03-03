@@ -10,11 +10,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180303070242) do
+ActiveRecord::Schema.define(version: 20180303102733) do
 
   create_table "m_pesa_services", force: :cascade do |t|
     t.integer "user_id"
-    t.boolean "status", default: false
+    t.string "status"
     t.string "county"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

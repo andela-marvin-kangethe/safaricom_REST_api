@@ -1,5 +1,5 @@
 class UserController < ApplicationController
-  before_action :set_user only: [:show, :update, :destroy]
+  before_action :set_user, only: [:show, :update, :destroy]
 
   "GET /users"
   def index
@@ -21,7 +21,7 @@ class UserController < ApplicationController
   "PUT /user/:id"
   def update
     @user.update!(user_params)
-    head :no_content
+    json_response(@user)
   end
 
   "DESTROY /user/:id"
@@ -37,6 +37,6 @@ class UserController < ApplicationController
   end
 
   def user_params
-    params.permit!(:name, :role)
+    params.permit(:name, :role)
   end
 end
